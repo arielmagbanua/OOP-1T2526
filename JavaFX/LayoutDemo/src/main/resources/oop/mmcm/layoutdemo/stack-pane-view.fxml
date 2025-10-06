@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.StackPane?>
+<StackPane alignment="TOP_LEFT" xmlns:fx="http://javafx.com/fxml"
+           fx:controller="oop.mmcm.layoutdemo.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <ImageView fitHeight="400" fitWidth="400" preserveRatio="true" StackPane.alignment="CENTER">
+        <Image url="@/images/dogie.gif"/>
+    </ImageView>
+
+    <ImageView fitHeight="350" fitWidth="350" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT">
+        <Image url="@/images/chuck.jpeg"/>
+    </ImageView>
+
+    <ImageView fitHeight="300" fitWidth="300" preserveRatio="true" StackPane.alignment="CENTER_LEFT">
+        <Image url="@/images/pepe.webp"/>
+    </ImageView>
+
+    <ImageView fitHeight="250" fitWidth="250" preserveRatio="true" StackPane.alignment="BOTTOM_RIGHT">
+        <Image url="@/images/ricky_roll.gif"/>
+    </ImageView>
+
+    <ImageView fitHeight="200" fitWidth="200" preserveRatio="true" StackPane.alignment="TOP_RIGHT">
+        <Image url="@/images/u_mad.gif"/>
+    </ImageView>
+</StackPane>
