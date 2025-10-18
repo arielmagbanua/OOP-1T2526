@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import java.util.HashMap?>
+<?import java.lang.String?>
+<?import java.lang.Double?>
+<?import java.lang.Boolean?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<?import oop.mmcm.fxml.User?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="oop.mmcm.fxml.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <fx:define>
+        <!-- Defines a Java properties for VBox -->
+        <HashMap fx:id="myMap"/>
+        <String fx:value="Hello, World!"/>
+        <Double fx:value="1.0"/>
+        <Boolean fx:value="false"/>
+
+        <!-- Define a custom object property -->
+        <User fx:id="user" name="John Doe" email="john@test.com"/>
+    </fx:define>
+
+    <!-- Include an external view in this view -->
+    <fx:include source="other-view.fxml"/>
+
+    <!-- Expression Binding -->
+    <TextField fx:id="textField" promptText="Type something here..."/>
+    <Text text="${textField.text}"/>
+
+    <Label fx:id="welcomeText"/>
+
+    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+</VBox>
