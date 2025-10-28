@@ -24,7 +24,7 @@ public class DatabaseHelper {
         if (this.database == null) {
             // no database connection yet, create one
             try (MongoClient mongoClient = MongoClients.create(dbUri)) {
-                this.database = mongoClient.getDatabase("movies");
+                this.database = mongoClient.getDatabase("sample_mflix");
             }
         }
 
