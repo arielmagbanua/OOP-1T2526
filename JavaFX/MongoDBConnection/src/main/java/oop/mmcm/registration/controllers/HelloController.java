@@ -17,7 +17,7 @@ public class HelloController {
 
         if (db != null) {
             // connection successful and database retrieved
-            message.setText("Connected to database: " + db.getName());
+            message.setText("Connected to database: " + db.getName() + " with collection of " + db.getCollection("movies").getNamespace());
         }
     }
 }
