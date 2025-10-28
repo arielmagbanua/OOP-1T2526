@@ -79,6 +79,7 @@ public class ScenesApplication extends Application {
     public void next() {
         if (page < MAX_PAGE) {
             ++page;
+            return;
         }
 
         this.switchPage(page);
@@ -87,6 +88,7 @@ public class ScenesApplication extends Application {
     public void previous() {
         if (page > 0) {
             --page;
+            return;
         }
 
         this.switchPage(page);
