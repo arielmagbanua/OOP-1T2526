@@ -1,10 +1,19 @@
 package oop.mmcm.tasksapp;
 
+import com.mongodb.ConnectionString;
+import com.mongodb.MongoClientSettings;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import oop.mmcm.tasksapp.controllers.BaseController;
+import oop.mmcm.tasksapp.models.User;
+import oop.mmcm.tasksapp.repositories.UserRepository;
+import org.bson.Document;
 
 import java.io.IOException;
 
