@@ -46,7 +46,7 @@ public class LoginController extends BaseController {
 
         this.clearFields();
 
-        // TODO: after login navigate to the main application scene
+        this.application.goToTasks();
     }
 
     @FXML
