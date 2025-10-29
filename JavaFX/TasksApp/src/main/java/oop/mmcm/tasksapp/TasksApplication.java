@@ -24,6 +24,8 @@ public class TasksApplication extends Application {
 
     private Scene registerScene;
 
+    private Scene tasksScene;
+
     @Override
     public void start(Stage stage) throws IOException {
         // set the main
@@ -48,6 +50,11 @@ public class TasksApplication extends Application {
         // get the register controller and set the application reference
         BaseController registerController = registerLoader.getController();
         registerController.setApplication(this);
+
+        FXMLLoader tasksLoader = new FXMLLoader(TasksApplication.class.getResource("tasks.fxml"));
+        this.tasksScene = new Scene(tasksLoader.load(), 480, 360);
+        BaseController tasksController = tasksLoader.getController();
+        tasksController.setApplication(this);
     }
 
     public void goToRegister() {
@@ -58,5 +65,10 @@ public class TasksApplication extends Application {
     public void goToLogin() {
         this.mainStage.setTitle("Login");
         this.mainStage.setScene(this.loginScene);
+    }
+
+    public void goToTasks() {
+        this.mainStage.setTitle("Tasks");
+        this.mainStage.setScene(this.tasksScene);
     }
 }
